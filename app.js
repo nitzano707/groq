@@ -1,11 +1,10 @@
 async function sendPrompt() {
     const prompt = document.getElementById("promptInput").value;
     
-    const response = await fetch("https://api.groq.com/v1/ai_inference", {
+    const response = await fetch("/generate", {  // כאן אתה שולח ל-Backend
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${GROQ_API_KEY}`  // זכרו לשמור את ה-API Key בצורה מאובטחת במשתני סביבה
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({ prompt: prompt })
     });
