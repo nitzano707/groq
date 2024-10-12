@@ -12,3 +12,4 @@ async function sendPrompt() {
     const result = await response.json();
     document.getElementById("result").innerText = result.text || "No result";
 }
+ 
