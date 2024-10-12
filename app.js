@@ -1,7 +1,7 @@
 async function sendPrompt() {
     const prompt = document.getElementById("promptInput").value;
     
-    const response = await fetch("/generate", {  // כאן אתה שולח ל-Backend
+    const response = await fetch("/api/generate", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
